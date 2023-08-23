@@ -8,9 +8,20 @@ const options = {
 };
 async function FetchingApi(){
 try {
+    // cityName.innerHTML=city
 	const response = await fetch(url, options);
-	const result = await response.json();
-	console.log(result);
+	const data = await response.json();
+	console.log(data);
+    cloud_pct.innerHTML = data.cloud_pct;
+    temp.innerHTML = data.temp;
+    feels_like.innerHTML = data.feels_like;
+    humidity.innerHTML = data.humidity;
+    min_temp.innerHTML = data.min_temp;
+    max_temp.innerHTML = data.max_temp;
+    wind_speed.innerHTML = data.wind_speed;
+    wind_degree.innerHTML = data.wind_degree;
+    sunrise.innerHTML = data.sunrise;
+    sunset.innerHTML = data.sunset;
 } catch (error) {
 	console.error(error);
 }
