@@ -137,7 +137,7 @@ const getWeatherAPi = async (city) => {
       );
       const data = await response.json();
       Kolkata_cloud_pct.innerHTML = data.cloud_pct;
-      Kolkata_temp.innerHTML = dataKolkata
+      Kolkata_temp.innerHTML = data.temp;
       Kolkata_feels_like.innerHTML = data.feels_like;
       Kolkata_humidity.innerHTML = data.humidity;
       Kolkata_min_temp.innerHTML = data.min_temp;
